@@ -1,25 +1,33 @@
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub } from 'react-icons/fa';
+import { SiTypescript, SiPostgresql, SiPrisma, SiExpress, SiMongodb, SiNextdotjs, SiPostman } from 'react-icons/si';
+import { motion } from 'framer-motion';
 
-const techstack=[{
-    name: 'HTML', icon: './icons8-html-5-96.png'
-},{name:'CSS', icon: './icons8-css3-96.png'},{name:'JS',icon:'./icons8-javascript-96.png'},
-{name:'Typescript',icon:'./icons8-typescript-96.png'},{name:'React',icon:'./images.png',width:96,height:96},{
-    name:'Postgresql',icon:'./postgresql.png',width:96,height:96
-}]
+const TechStack = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col items-center justify-center p-6 border-2 border-gray-700 rounded-lg bg-gray-900"
+    >
+      <h3 className="text-2xl text-white mb-4">Tech Stack</h3>
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-4 items-center justify-center">
+        <FaHtml5 size={64} className="text-orange-600" />
+        <FaCss3Alt size={64} className="text-blue-600" />
+        <FaJs size={64} className="text-yellow-500" />
+        <SiTypescript size={64} className="text-blue-500" />
+        <FaReact size={64} className="text-cyan-500" />
+        <FaNodeJs size={64} className="text-green-600" />
+        <SiExpress size={64} className="text-gray-300" />
+        <SiMongodb size={64} className="text-green-500" />
+        <SiPostgresql size={64} className="text-blue-300" />
+        <SiPrisma size={64} className="text-gray-300" />
+        <FaGithub size={64} className="text-white" />
+        <SiNextdotjs size={64} className="text-white" />
+        <SiPostman size={64} className="text-orange-400" />
+      </div>
+    </motion.div>
+  );
+};
 
-const TechStack = ()=>{
-    return (
-        <div className="flex items-center justify-center flex-col">
-            <h3 className="text-2xl text-white">Tech Stack</h3>
-            <div className="w-full flex items-center justify-center">
-            {techstack.map((tech)=>{
-                return (
-                    <div>
-                        <img src={tech.icon} alt={tech.name} width={tech.width}/>
-                    </div>
-                    )
-            })}
-            </div>
-        </div>
-    )
-}
 export default TechStack;

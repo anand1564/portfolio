@@ -10,16 +10,16 @@ const Footer = () => {
           <div className="w-full flex flex-col text-center">
             <h3 className="text-lg font-semibold mb-4">Connect With Me</h3>
             <div className="flex justify-center gap-3">
-              <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
+              <a href="https://github.com/anand1564/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
                 <Github size={24} />
               </a>
-              <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
+              <a href="https://www.linkedin.com/in/anand-pandey-561162216/" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
                 <Linkedin size={24} />
               </a>
               <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
                 <X size={24} />
               </a>
-              <a href="mailto:your.email@example.com" className="hover:text-gray-300 transition-colors">
+              <a href="mailto:anand8584pandey@gmail.com" className="hover:text-gray-300 transition-colors">
                 <Mail size={24} />
               </a>
             </div>

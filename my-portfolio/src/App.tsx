@@ -4,15 +4,19 @@ import Portfolio from './pages/Portfolio'
 import About from './pages/About'
 import TechStack from './pages/TechStack'
 import Footer from './pages/Footer'
+import Navbar from './pages/Navbar'
+import { useRef } from 'react'
 function App() {
-
+  const portfolioRef = useRef<HTMLDivElement>(null);
+  const techStackRef = useRef<HTMLDivElement>(null);
+  const contactRef=useRef<HTMLDivElement>(null);
   return (
     <div className='font-poppins'>
-    <h1 className='text-4xl text-center text-blue-500 mt-5'>Welcome to my portfolio</h1>
-    <About />
-      <Portfolio />
-      <TechStack />
-      <Footer />
+      <Navbar portfolioRef={portfolioRef} techStackRef={techStackRef} contactRef={contactRef}/>
+      <About />
+      <Portfolio ref={portfolioRef}/>
+      <TechStack ref={techStackRef}/>
+      <Footer ref={contactRef}/>
       </div>
   )
 }

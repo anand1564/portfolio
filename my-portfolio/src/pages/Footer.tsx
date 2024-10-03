@@ -1,11 +1,11 @@
 
 import { Github, Linkedin, X, Mail } from 'lucide-react';
-
-const Footer = () => {
+import React from 'react';
+const Footer =React.forwardRef<HTMLDivElement>((props,ref) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-800 text-white py-8">
+    <footer className="bg-gray-800 text-white py-8" ref={ref}>
           {/* Social Media Links */}
           <div className="w-full flex flex-col text-center">
             <h3 className="text-lg font-semibold mb-4">Connect With Me</h3>
@@ -31,6 +31,6 @@ const Footer = () => {
           </div>
     </footer>
   );
-};
+});
 
 export default Footer;

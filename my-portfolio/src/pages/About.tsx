@@ -3,7 +3,7 @@
 import {motion} from 'framer-motion'
 const About = () => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center mt-4'>
         <h1 className='text-3xl font-bold text-center text-white'>Hi There <span className='blog-title-emoji'>👋</span></h1>
         <motion.h1 className='text-3xl font-bold text-center text-white mt-2'
         initial={{opacity: 0,x:-100}}

@@ -1,13 +1,13 @@
 import GridBackground from '@/ui/grid-backgroung'
 import ProjectCard from './project'
-
-const Portfolio = () => {
+import React from 'react'
+const Portfolio=React.forwardRef<HTMLDivElement>((props, ref)=> {
   return (
-    <div>
+    <div ref={ref}>
     <GridBackground />
     <ProjectCard />
     </div>
   )
-}
+});
 
 export default Portfolio

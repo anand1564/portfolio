@@ -1,13 +1,14 @@
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaGithub } from 'react-icons/fa';
-import { SiTypescript, SiPostgresql, SiPrisma, SiExpress, SiMongodb, SiNextdotjs, SiPostman } from 'react-icons/si';
+import { SiTypescript, SiPostgresql, SiPrisma, SiExpress, SiMongodb, SiNextdotjs, SiPostman,SiDocker, } from 'react-icons/si';
 import { motion } from 'framer-motion';
-
-const TechStack = () => {
+import React from 'react';
+const TechStack =React.forwardRef<HTMLDivElement>((props,ref) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
+      ref={ref}
       className="flex flex-col items-center justify-center p-6 border-2 border-gray-700 rounded-lg bg-gray-900"
     >
       <h3 className="text-2xl text-white mb-4">Tech Stack</h3>
@@ -25,9 +26,10 @@ const TechStack = () => {
         <FaGithub size={64} className="text-white" />
         <SiNextdotjs size={64} className="text-white" />
         <SiPostman size={64} className="text-orange-400" />
+        <SiDocker size={64} className="text-blue-600" />
       </div>
     </motion.div>
   );
-};
+});
 
 export default TechStack;
